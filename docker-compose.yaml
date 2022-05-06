@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+    todoapp:
+        build: .
+        restart: always
+        ports:
+            - "80:3000"
+        networks:
+            - devenesnet
+
+networks:
+    devenesnet:
+        driver: bridge
